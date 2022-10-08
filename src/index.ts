@@ -13,9 +13,9 @@ export = (app: Probot) => {
   app.log("Im alive!");
 
   app.on("issues.opened", async (context) => {
-    const list: any = [await sca.getReaction('uwu'), await sca.getReaction('uwu'),
+    const list = [await sca.getReaction('uwu'), await sca.getReaction('uwu'),
     await sca.getReaction('pout'), await sca.getReaction('smug')];
-    let img: any = list[Math.floor(Math.random() * list.length)];
+    let img = list[Math.floor(Math.random() * list.length)];
 
     const thanks: Array<string> = [
       "You'll get a response soon! UwU",
@@ -36,8 +36,9 @@ export = (app: Probot) => {
 
   // create event pull request
   app.on("pull_request.opened", async (context) => {
-    let img: any = await sca.getReaction('pat');
-    //create random thanks array
+    const list = [await sca.getReaction('pat'), await sca.getReaction('happy'),
+    await sca.getReaction('pat'), await sca.getReaction('nom')];
+    let img = list[Math.floor(Math.random() * list.length)];
     const thanks: Array<string> = [
       "Thanks for making a pull request, an collaborators will get back to you soon! UwU",
       "We will get back to you soon! OwO",

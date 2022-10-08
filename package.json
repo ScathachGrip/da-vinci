@@ -1,16 +1,10 @@
 {
-  "name": "my-first-app",
-  "version": "1.0.0",
-  "private": true,
-  "description": "A Probot app",
+  "name": "da-vinci",
+  "version": "1.0.1",
+  "description": "Github experimental bot",
   "author": "sinkaroid",
   "license": "ISC",
-  "homepage": "https://github.com//",
-  "keywords": [
-    "probot",
-    "github",
-    "probot-app"
-  ],
+  "homepage": "https://github.com/ScathachGrip/da-vinci",
   "scripts": {
     "build": "rm -rf lib/ && tsc",
     "start": "probot run ./lib/index.js",
@@ -20,7 +14,7 @@
     "probot": "^12.2.8",
     "probot-attachments": "^1.0.1",
     "probot-commands": "^1.1.0",
-    "scathach-api": "^1.0.12"
+    "scathach-api": "^1.0.16"
   },
   "devDependencies": {
     "@types/jest": "^28.1.0",
