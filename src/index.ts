@@ -56,6 +56,14 @@ export = (app: Probot) => {
     await context.octokit.issues.addLabels(context.issue({ labels: ["pr:pending"] }));
   });
 
+  // create event pull request close and remove label pr:pending
+  app.on("pull_request.closed", async (context) => {
+    await context.octokit.issues.removeLabel(context.issue({ name: "pr:pending" })).catch((err) => {
+      console.log(err);
+    });
+  });
+
+
   /*
   commands(app, "label", async (context: any, command: any) => {
     console.log(context.payload.comment.user);
